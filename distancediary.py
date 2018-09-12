@@ -358,9 +358,3 @@ def intent_handler(event, user_id):
         return text_response("Goodbye.")
     else:
         return text_response("I don't know that one, ask Distance Diary for help to get sample utterances.")
-
-with open('input.json') as f:
-    data = json.load(f)
-
-out = json.dumps(lambda_handler(data, 'a'), indent=2)
-print(out)
